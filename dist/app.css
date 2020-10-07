@@ -1,4 +1,69 @@
-h1 {
-  color: blue;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #2e3a46;
+  height: 80px;
+}
+
+header .header-wrap {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+header .header-wrap .logo-brand {
+  height: 60px;
+}
+
+main {
+  background-color: #1e2d3b;
+}
+
+main .wrap-main {
+  padding: 70px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+main .wrap-main .box-album {
+  width: calc((90% - 120px) / 4);
+  height: 450px;
+  margin: 2%;
+  background-color: #2e3a46;
+  padding: 2%;
+  text-align: center;
+}
+
+main .wrap-main .box-album img {
+  max-width: 100%;
+}
+
+main .wrap-main .box-album .title {
+  font-size: 28px;
+  color: #fff;
+  margin: 10% 0;
+}
+
+main .wrap-main .box-album .author {
+  font-size: 20px;
+  color: #62666b;
+}
+
+main .wrap-main .box-album .year {
+  font-size: 16px;
+  color: #62666b;
 }
 

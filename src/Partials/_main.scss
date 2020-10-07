@@ -1,0 +1,34 @@
+main {
+  background-color: $col-brand-2;
+  // height: $h-main;
+  .wrap-main {
+    padding: 70px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .box-album {
+      width: calc((90% - 120px) / 4);
+      height: 450px;
+      margin: 2%;
+      background-color: $col-brand-1;
+      padding: 2%;
+      text-align: center;
+      img {
+        max-width: 100%;
+      }
+      .title {
+        font-size: 28px;
+        color: $col-title;
+        margin: 10% 0;
+      }
+      .author {
+        font-size: 20px;
+        color: $col-details;
+      }
+      .year {
+        font-size: 16px;
+        color: $col-details;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+// COLORS
+$col-brand-1: #2e3a46; // bg Header
+$col-brand-2: #1e2d3b; // bg Main
+$col-title: #fff; // color author nel box-album
+$col-details: #62666b; // color autohr e year nel box-album
+
+// DIMENSIONS
+$h-header: 80px;
+$h-main: calc(100vh - #{$h-header});
+$w-container: 1280px;
