@@ -21,66 +21,21 @@
     <!-- main -->
     <main>
       <div class="wrap-main container">
+        <?php include "db.php" ?>
+        <?php foreach ($database as $album) { ?>
+        <!-- container tipo album   -->
         <div class="box-album">
-          <img src="https://images-na.ssl-images-amazon.com/images/I/51sBr4IWDwL.jpg" alt="cover album">
-          <h2 class="title">NEW JERSEY</h2>
-          <h4 class="author">Bon Jovi</h4>
-          <h4 class="year">1988</h4>
+          <!-- url immagine cover album -->
+          <img src="<?php echo $album["poster"]?>" alt="cover album">
+          <!-- titolo album -->
+          <h2 class="title"><?php echo $album["title"]?></h2>
+          <!-- autore album -->
+          <h4 class="author"><?php echo $album["author"]?></h4>
+          <!-- anno album -->
+          <h4 class="year"><?php echo $album["year"]?></h4>
         </div>
-        <div class="box-album">
-          <img src="https://images-na.ssl-images-amazon.com/images/I/51sBr4IWDwL.jpg" alt="cover album">
-          <h2 class="title">NEW JERSEY</h2>
-          <h4 class="author">Bon Jovi</h4>
-          <h4 class="year">1988</h4>
-        </div>
-        <div class="box-album">
-          <img src="https://images-na.ssl-images-amazon.com/images/I/51sBr4IWDwL.jpg" alt="cover album">
-          <h2 class="title">TEN'S SUMMONER'S TALES</h2>
-          <h4 class="author">Bon Jovi</h4>
-          <h4 class="year">1988</h4>
-        </div>
-        <div class="box-album">
-          <img src="https://images-na.ssl-images-amazon.com/images/I/51sBr4IWDwL.jpg" alt="cover album">
-          <h2 class="title">NEW JERSEY</h2>
-          <h4 class="author">Bon Jovi</h4>
-          <h4 class="year">1988</h4>
-        </div>
-        <div class="box-album">
-          <img src="https://images-na.ssl-images-amazon.com/images/I/51sBr4IWDwL.jpg" alt="cover album">
-          <h2 class="title">NEW JERSEY</h2>
-          <h4 class="author">Bon Jovi</h4>
-          <h4 class="year">1988</h4>
-        </div>
-        <div class="box-album">
-          <img src="https://images-na.ssl-images-amazon.com/images/I/51sBr4IWDwL.jpg" alt="cover album">
-          <h2 class="title">NEW JERSEY</h2>
-          <h4 class="author">Bon Jovi</h4>
-          <h4 class="year">1988</h4>
-        </div>
-        <div class="box-album">
-          <img src="https://images-na.ssl-images-amazon.com/images/I/51sBr4IWDwL.jpg" alt="cover album">
-          <h2 class="title">NEW JERSEY</h2>
-          <h4 class="author">Bon Jovi</h4>
-          <h4 class="year">1988</h4>
-        </div>
-        <div class="box-album">
-          <img src="https://images-na.ssl-images-amazon.com/images/I/51sBr4IWDwL.jpg" alt="cover album">
-          <h2 class="title">NEW JERSEY</h2>
-          <h4 class="author">Bon Jovi</h4>
-          <h4 class="year">1988</h4>
-        </div>
-        <div class="box-album">
-          <img src="https://images-na.ssl-images-amazon.com/images/I/51sBr4IWDwL.jpg" alt="cover album">
-          <h2 class="title">NEW JERSEY</h2>
-          <h4 class="author">Bon Jovi</h4>
-          <h4 class="year">1988</h4>
-        </div>
-        <div class="box-album">
-          <img src="https://images-na.ssl-images-amazon.com/images/I/51sBr4IWDwL.jpg" alt="cover album">
-          <h2 class="title">NEW JERSEY</h2>
-          <h4 class="author">Bon Jovi</h4>
-          <h4 class="year">1988</h4>
-        </div>
+        <!-- /container tipo album   -->
+        <?php } ?>
       </div>
     </main>
     <!-- /main -->
