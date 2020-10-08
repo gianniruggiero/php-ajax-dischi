@@ -8,6 +8,9 @@ $(document).ready(function() {
       url: 'http://localhost/php-ajax-dischi/api.php',
       method: "GET",
       success: function (data) {
+        // prende i nomi artisti dal db e li carica nella select
+        loadArtistsInSelect(data);
+        // stampa nella pagina HTML tutti gli album presenti nell'argomento data
         renderAlbum(data);
       },
       error: function (richiesta, stato, errori) {
@@ -15,6 +18,8 @@ $(document).ready(function() {
       }
     }
   );
+
+
 
   $(".select-artist").change(function(){
     var artist = $(".select-artist").val();
@@ -38,7 +43,6 @@ $(document).ready(function() {
 
 // funzione che inietta i dati del DB nel template handlebars e stampa nel DOM
 function renderAlbum(albums) {
-  console.log(albums);
   $(".wrap-main").html("");
   var source = $("#album-template").html();
   var template = Handlebars.compile(source);
@@ -56,5 +60,21 @@ function renderAlbum(albums) {
     var html = template(context);
     // inietta nel DOM il codice Html, appendendolo al div elenco album
     $(".wrap-main").append(html);
+  };
+};
+
+// funzione che prende i nomi artisti dal db e li carica nella select
+function loadArtistsInSelect(album) {
+  // array per controllo nomi degli artisti da caricare nella select
+  var arraySelect = [];
+  // ciclo per caricare i nomi artisti nella select
+  for (var i = 0; i < album.length; i++) {
+    // controlla se il nome artista è già stato inserito nella select
+    if (!arraySelect.includes(album[i].author)) {
+      // aggiune il nome artista nell'array di controllo dei nomi
+      arraySelect.push(album[i].author);
+      // aggiunge il nome artista alla select
+      $(".select-artist").append("<option value='"+album[i].author+"'>"+album[i].author+"</option>");
+    };
   };
 };
