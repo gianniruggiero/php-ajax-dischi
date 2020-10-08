@@ -38,6 +38,24 @@
             'poster' => 'https://upload.wikimedia.org/wikipedia/en/4/42/Stingnight.jpg'
         ],
         [
+            'title' => 'Brand New Day',
+            'author' => 'Sting',
+            'year' => 1999,
+            'poster' => 'https://img.discogs.com/7KO3_zM50oDYBmKmd7TlDKw8O0Q=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-699340-1505317593-6787.jpeg.jpg'
+        ],
+        [
+            'title' => 'Sacred Love',
+            'author' => 'Sting',
+            'year' => 2003,
+            'poster' => 'https://img.discogs.com/rDUZNBXRE1VTMLeZdkyLknECwNw=/fit-in/600x597/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-570030-1515219617-4060.jpeg.jpg'
+        ],
+        [
+            'title' => 'A kind of magic',
+            'author' => 'Queen',
+            'year' => 1986,
+            'poster' => 'https://img.discogs.com/0Lb4OkpCZbZwUjCF-3HAKqnhweQ=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-1964028-1476561657-8409.jpeg.jpg'
+        ],
+        [
             'title' => 'One more car, one more rider',
             'author' => 'Eric Clapton',
             'year' => 2002,

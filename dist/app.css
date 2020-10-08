@@ -42,6 +42,7 @@ header .header-wrap .select-artist {
 
 main {
   background-color: #1e2d3b;
+  min-height: calc(100vh - 80px);
 }
 
 main .wrap-main {
@@ -59,7 +60,7 @@ main .wrap-main {
 
 main .wrap-main .box-album {
   width: calc((90% - 80px) / 4);
-  height: 420px;
+  height: 450px;
   margin: 2%;
   background-color: #2e3a46;
   padding: 2%;

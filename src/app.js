@@ -18,15 +18,12 @@ $(document).ready(function() {
 
   $(".select-artist").change(function(){
     var artist = $(".select-artist").val();
-    console.log(artist);
-    console.log('http://localhost/php-ajax-dischi/api.php?artist='+artist);
-    // chiamata ajax per recuperare dati del db
+    // chiamata ajax per recuperare dati del db filtrati per artista
     $.ajax(
       {
-        url: 'http://localhost/php-ajax-dischi/api.php?artist='+artist,
+        url: 'http://localhost/php-ajax-dischi/api.php?author='+artist,
         method: "GET",
         success: function (data) {
-          console.log(data);
           // alert("ajax api author success");
           renderAlbum(data);
         },
@@ -41,14 +38,17 @@ $(document).ready(function() {
 
 // funzione che inietta i dati del DB nel template handlebars e stampa nel DOM
 function renderAlbum(albums) {
+  console.log(albums);
+  $(".wrap-main").html("");
   var source = $("#album-template").html();
   var template = Handlebars.compile(source);
   // ciclo per caricare il template con i dati del DB
   for (var i = 0; i < albums.length; i++) {
     // manipola il context con i dati del DB
+    var tempTitle = albums[i].title.toUpperCase();
     var context = {
       url: albums[i].poster,
-      title: albums[i].title,
+      title: tempTitle,
       author: albums[i].author,
       year: albums[i].year,
     };

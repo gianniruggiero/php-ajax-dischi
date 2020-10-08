@@ -18,8 +18,9 @@
         <select class="select-artist" name="sel-artist">
           <option value="All artists" selected=selected>All artists</option>
           <option value="Queen">Queen</option>
+          <option value="Sting">Sting</option>
           <option value="Bon Jovi">Bon Jovi</option>
-          <option value="Steve Gadd">Steve Gadd Band</option>
+          <option value="Steve Gadd Band">Steve Gadd Band</option>
           <option value="Iron Maiden">Iron Maiden</option>
         </select>
       </div>
@@ -29,23 +30,25 @@
     <main>
 
       <div class="wrap-main container">
-        <!-- HANDLEBARS template   -->
-        <script id="album-template" type="text/x-handlebars-template">
-          <!-- container tipo album   -->
-          <div class="box-album">
-            <!-- url immagine cover album -->
-            <img src={{url}} alt="cover album">
-            <!-- titolo album -->
-            <h2 class="title">{{title}}</h2>
-            <!-- autore album -->
-            <h4 class="author">{{author}}</h4>
-            <!-- anno album -->
-            <h4 class="year">{{year}}</h4>
-          </div>
-          <!-- /container tipo album   -->
-        </script>
-        <!-- /HANDLEBARS template   -->
       </div>
+
+      <!-- HANDLEBARS template   -->
+      <script id="album-template" type="text/x-handlebars-template">
+        <!-- container tipo album   -->
+        <div class="box-album">
+          <!-- url immagine cover album -->
+          <img src={{url}} alt="cover album">
+          <!-- titolo album -->
+          <h2 class="title">{{title}}</h2>
+          <!-- autore album -->
+          <h4 class="author">{{author}}</h4>
+          <!-- anno album -->
+          <h4 class="year">{{year}}</h4>
+        </div>
+        <!-- /container tipo album   -->
+      </script>
+      <!-- /HANDLEBARS template   -->
+
     </main>
     <!-- /main -->
     <script src="dist/app.js" charset="utf-8"></script>

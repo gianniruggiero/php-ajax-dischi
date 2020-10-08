@@ -1,6 +1,6 @@
 main {
   background-color: $col-brand-2;
-  // height: $h-main;
+  min-height: $h-main;
   .wrap-main {
     padding: 70px 40px;
     display: flex;
@@ -11,7 +11,7 @@ main {
     }
     .box-album {
       width: calc((90% - 80px) / 4);
-      height: 420px;
+      height: 450px;
       margin: 2%;
       background-color: $col-brand-1;
       padding: 2%;
