@@ -20,24 +20,26 @@
     <!-- /header -->
     <!-- main -->
     <main>
-
       <div class="wrap-main container">
-        <!-- HANDLEBARS template   -->
-        <script id="album-template" type="text/x-handlebars-template">
+        <?php include "db.php" ?>
+        <?php if (!empty($database)) {?>
+          <?php foreach ($database as $album) { ?>
           <!-- container tipo album   -->
           <div class="box-album">
             <!-- url immagine cover album -->
-            <img src={{url}} alt="cover album">
+            <img src="<?php echo $album["poster"]?>" alt="cover album">
             <!-- titolo album -->
-            <h2 class="title">{{title}}</h2>
+            <h2 class="title"><?php echo $album["title"]?></h2>
             <!-- autore album -->
-            <h4 class="author">{{author}}</h4>
+            <h4 class="author"><?php echo $album["author"]?></h4>
             <!-- anno album -->
-            <h4 class="year">{{year}}</h4>
+            <h4 class="year"><?php echo $album["year"]?></h4>
           </div>
           <!-- /container tipo album   -->
-        </script>
-        <!-- /HANDLEBARS template   -->
+          <?php } ?>
+        <?php } else {?>
+          <div class="alert">Non ci sono album in Database</div>
+        <?php } ?>
       </div>
     </main>
     <!-- /main -->
