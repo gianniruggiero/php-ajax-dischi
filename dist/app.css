@@ -25,13 +25,19 @@ header {
 
 header .header-wrap {
   height: 100%;
+  padding: 0 5px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
 }
 
 header .header-wrap .logo-brand {
   height: 60px;
+}
+
+header .header-wrap .select-artist {
+  font-size: 22px;
+  padding: 0 10px;
 }
 
 main {

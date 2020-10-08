@@ -15,6 +15,13 @@
     <header>
       <div class="header-wrap container">
         <img class="logo-brand"src="img/logo.png" alt="">
+        <select class="select-artist" name="sel-artist">
+          <option value="All artists" selected=selected>All artists</option>
+          <option value="Queen">Queen</option>
+          <option value="Bon Jovi">Bon Jovi</option>
+          <option value="Steve Gadd">Steve Gadd Band</option>
+          <option value="Iron Maiden">Iron Maiden</option>
+        </select>
       </div>
     </header>
     <!-- /header -->

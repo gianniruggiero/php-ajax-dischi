@@ -15,6 +15,28 @@ $(document).ready(function() {
       }
     }
   );
+
+  $(".select-artist").change(function(){
+    var artist = $(".select-artist").val();
+    console.log(artist);
+    console.log('http://localhost/php-ajax-dischi/api.php?artist='+artist);
+    // chiamata ajax per recuperare dati del db
+    $.ajax(
+      {
+        url: 'http://localhost/php-ajax-dischi/api.php?artist='+artist,
+        method: "GET",
+        success: function (data) {
+          console.log(data);
+          // alert("ajax api author success");
+          renderAlbum(data);
+        },
+        error: function (richiesta, stato, errori) {
+          alert("E' avvenuto un errore. " + errori);
+        }
+      }
+    );
+
+  })
 });
 
 // funzione che inietta i dati del DB nel template handlebars e stampa nel DOM

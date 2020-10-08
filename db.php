@@ -32,6 +32,12 @@
             'poster' => 'https://i.ebayimg.com/images/g/PRYAAOSwBBRch6rW/s-l300.jpg'
         ],
         [
+            'title' => 'Bring On the Night',
+            'author' => 'Sting',
+            'year' => 1986,
+            'poster' => 'https://upload.wikimedia.org/wikipedia/en/4/42/Stingnight.jpg'
+        ],
+        [
             'title' => 'One more car, one more rider',
             'author' => 'Eric Clapton',
             'year' => 2002,
